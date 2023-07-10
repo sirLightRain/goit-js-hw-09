@@ -15,11 +15,13 @@ function getRandomHexColor() {
 
 // 4. Оголошуємо глобвльну змінну для видимості у всіх обробниках
 let intervalColorChange;
+btnStop.disabled = true;
 
 // 5. Обробник кнопки Start
 function handlerStart() {
   // 5.1 Робимо кнопку неактивною (оскільки обробник реагувуатиме на клік, то після кліку Старт стане неактивним)
   btnStart.disabled = true;
+  btnStop.disabled = false;
   // 5.2 Змінюємо колір фону з інтервалом в 1 секунду = 1000 млсек
   intervalColorChange = setInterval(function () {
     document.body.style.backgroundColor = getRandomHexColor();
@@ -32,4 +34,6 @@ function handlerStop() {
   clearInterval(intervalColorChange);
   // 6.2 Робимо кнопку старт знову активною
   btnStart.disabled = false;
+  btnStop.disabled = true;
 }
+
