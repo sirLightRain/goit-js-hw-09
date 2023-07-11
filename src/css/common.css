@@ -20,6 +20,7 @@ img {
 .timer {
   display: flex;
   margin-top: 10px;
+  
 }
 
 .field {
@@ -34,4 +35,8 @@ img {
 
 .value {
   font-size: 20px;
+}
+
+.label {
+  font-weight: bold;
 }
